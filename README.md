@@ -5,3 +5,7 @@
 - Run `yarn start` to view your work in the browser
 - When you're done, commit and push your changes
 
+## Process
+
+- Create a MovieList component
+- Hook it up
