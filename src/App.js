@@ -1,18 +1,46 @@
-import React from 'react';
-import './App.css';
-import movies from './data';
+import React, { Component } from "react";
+import Data from "./data";
+import MovieList from "./components/MovieList";
+import Header from "./header";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import style from "./App.module.css";
+import Aux from "./Aux";
 
-export default class App extends React.Component {
+export class App extends Component {
   render() {
-    console.log(movies.results);
-    return (
-      <div className="App">
-        <header className="App-header">
+    const renderMovie = movieList => {
+      return movieList.results.map(movie => {
+        return (
+          <Col sm={4}>
+            <MovieList
+              key={movie.id}
+              title={movie.title}
+              url={movie.backdrop_path}
+              overview={movie.overview}
+            ></MovieList>
+          </Col>
+        );
+      });
+    };
 
-        </header>
-      </div>
+    return (
+      <Aux>
+        <div>
+          <Header></Header>
+        </div>
+        <div className={style.main}>
+          <Container>
+            <Row>{renderMovie(Data)}</Row>
+          </Container>
+        </div>
+      </Aux>
     );
   }
 }
+
+export default App;
 
 // export default App;
