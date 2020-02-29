@@ -95,7 +95,7 @@ export default
         "adult": false,
         "backdrop_path": "/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg",
         "original_language": "en",
-        "original_title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+        "original_title": "Birds of Prey",
         "genre_ids": [
           28,
           35,

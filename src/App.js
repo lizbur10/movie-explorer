@@ -8,11 +8,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
           <Header />
-        </div>
+          <div className = "container">
           <MoviesList list={movies.results} />
-        
+          </div>
       </div>
     );
   }
