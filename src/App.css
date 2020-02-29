@@ -1,3 +1,13 @@
+* {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+body{
+  background: #f2f2f2;
+  font-family: 'Ubuntu', Helvetica;
+}
 .App {
   text-align: center;
 }
@@ -15,7 +25,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +37,52 @@
 .App-link {
   color: #61dafb;
 }
+/*   */
 
+.logo{
+  font-weight: 700;
+  font-size: 30px;
+}
+.right{margin-left: auto}
+.card {
+  border-radius: 8px;
+  border-style: none;
+  overflow: hidden;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+.card:hover {
+  -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+.card h3{
+  margin-top: 15px;
+}
+.movieImg{
+  height: 450px;
+}
+.infoList li{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px auto;
+}
+.infoList p.overviewLi{
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 5.6em;
+  margin: 0 20px 10px;
+  font-weight: 400;
+}
+i{color: #ff9d00}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
