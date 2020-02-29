@@ -19,7 +19,15 @@ export default class MoviesList extends Component {
                 >
             {
                 this.props.list.map(movie => 
-                    <Grid item xs={4} key={movie.id} style={{marginBottom: "50px"}} >
+                    <Grid 
+                    item
+                    container
+                    direction="row"
+                    justify="center"
+                     xs={4} 
+                     key={movie.id} 
+                     style={{ marginBottom: "50px"}} 
+                     >
                     <MovieCard title={movie.original_title}
                      link={baseURL + movie.poster_path}
                      date={movie.release_date}
