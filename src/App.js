@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
 import movies from './data';
+import MoviesList from "./MoviesList"
+import Header from "./Header"
 
 export default class App extends React.Component {
   render() {
-    console.log(movies.results);
     return (
       <div className="App">
-        <header className="App-header">
-
-        </header>
+        <div className="App-header">
+          <Header />
+        </div>
+          <MoviesList list={movies.results} />
+        
       </div>
     );
   }
