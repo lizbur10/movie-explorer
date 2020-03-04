@@ -9,7 +9,7 @@ export class MovieList extends Component {
     let src = base + drop;
 
     return (
-      <div className={style.main}>
+      <div onClick={this.props.click} className={style.main}>
         <CardDeck>
           <Card>
             <Card.Img variant="top" src={src} width="100%" />
