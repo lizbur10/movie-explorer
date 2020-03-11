@@ -1,6 +1,8 @@
+
 import React, { Component } from 'react'
 
 export default class MoviesList extends Component {
+   
     render() {
         const baseURL= "http://image.tmdb.org/t/p/w1280/"
         // console.log(this.props.list) 
