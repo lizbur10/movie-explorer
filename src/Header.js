@@ -16,8 +16,8 @@ export default function Header(props) {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField onChange={e=>props.search(e)} id="standard-basic" label="Movie Name" />
-      <Button onClick={e=>props.onsearch(e)} variant="contained">search</Button>
+      <TextField onChange={e=>props.handelChange(e)} id="standard-basic" label="Movie Name" />
+      <Button onClick={props.submit} variant="contained">search</Button>
 
     </form>
   );
