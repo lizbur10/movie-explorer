@@ -18,7 +18,8 @@ export default class MoviesList extends Component {
         const baseURL = "http://image.tmdb.org/t/p/w1280/"
 
         const list = this.props.movies.map(movie =>
-            <Grid item xs={4}>
+            
+            <Grid key={movie.id} item xs={4}>
                 <Paper>
 
                     <Card >
