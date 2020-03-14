@@ -10,6 +10,7 @@ class App extends React.Component {
     super()
     this.state = {
       movies: [],
+      actors: [],
       query: ""
     }
   }
@@ -57,6 +58,17 @@ class App extends React.Component {
     }
    }
 
+   handleClick = (id)=>{
+    fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=542003918769df50083a13c415bbc602`)
+       .then(res => res.json())
+       .then(data => this.setState({
+        actors:  data.cast.slice(0,4)
+       }) )
+  
+   }
+
+ 
+ 
   render() {
     return ( 
       <div>
@@ -65,11 +77,11 @@ class App extends React.Component {
           handlesubmit={this.handlesubmit} />
           <Router >
             <Route exact path='/' render={() => (
-              <MoviesList movies={this.state.movies} />
+              <MoviesList movies={this.state.movies} handleClick={this.handleClick} />
             )}
             />
             <Route path='/movies/:id' render={(routerProps) => (
-              <Movie {...routerProps} movies={this.state.movies}/>
+              <Movie {...routerProps} movies={this.state.movies} actors={this.state.actors} />
             )}
             />
           </Router>

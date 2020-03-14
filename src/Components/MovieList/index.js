@@ -23,7 +23,7 @@ export default class MoviesList extends Component {
 
                     <Card >
                         <CardActionArea>
-                            <Link to={`/movies/${movie.id}`} >
+                            <Link to={`/movies/${movie.id}`} onClick={()=>this.props.handleClick(movie.id)}>
                             <CardContent>
                                 <img src={baseURL + movie.poster_path} width="100%" alt="Poster" />
                                 <Typography gutterBottom variant="h5" component="h2">
